@@ -12,7 +12,7 @@ A beautiful, responsive landing page for Danjuma Empire - a diversified holding 
 
 ## 📁 Project Structure
 
-```
+```sh
 landingpage/
 ├── index.html          # Main HTML file
 ├── styles.css          # All CSS styles and animations
@@ -51,6 +51,7 @@ Simply open `index.html` in any modern web browser to view the landing page.
 ## 📱 Responsive Design
 
 The landing page is fully responsive and works on:
+
 - Desktop computers
 - Tablets
 - Mobile phones
@@ -85,7 +86,7 @@ The landing page is fully responsive and works on:
 ## 📞 Contact Information
 
 - **Email**: danjumaempireworld@gmail.com
-- **Phone**: +234 XXX XXX XXXX
+- **Phone**: +234 901 807 1372
 - **Location**: Nigeria, Africa
 
 ## 🏢 Business Units
