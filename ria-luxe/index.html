@@ -13,7 +13,7 @@
     <nav class="luxe-nav" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-brand">
-                <img src="../public/rialuxe.png" alt="RIA LUXE" class="nav-brand-image brand-image" width="180" height="52" decoding="async">
+                <img src="../public/rialuxe.png" alt="RIA LUXE" class="nav-brand-image" width="180" height="52" decoding="async">
             </a>
 
             <div class="nav-menu" id="nav-menu">
@@ -37,31 +37,57 @@
     </nav>
 
     <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="hero-glow hero-glow-left"></div>
-        <div class="hero-glow hero-glow-right"></div>
+        <div class="hero-bg">
+            <div class="hero-bg-gradient"></div>
+            <div class="hero-bg-pattern"></div>
+        </div>
 
-        <div class="container hero-layout">
-            <div class="hero-content">
-                <p class="hero-eyebrow">A RIA Empire Global Brand</p>
-                <h1 class="hero-title">Coordinated Luxury.<br><em>Professional by Design.</em></h1>
-                <p class="hero-description">
-                    RIA LUXE curates matched sets built around a signature wristwatch, paired with cufflinks,
-                    an optional ring, and refined eyewear, all designed to speak the same language of excellence.
-                </p>
-                <div class="hero-actions">
-                    <a href="#packages" class="btn-primary">View Packages</a>
-                    <a href="#collection" class="btn-secondary">Explore the Collection</a>
-                </div>
-                <div class="hero-badges">
-                    <span>Personal Use</span>
-                    <span>Gift Delivery</span>
-                    <span>Global Shipping</span>
-                </div>
+        <div class="container hero-content">
+            <p class="hero-eyebrow">A RIA Empire Global Brand</p>
+
+            <h1 class="hero-title">
+                <span class="title-line">RIA</span>
+                <span class="title-line title-line-accent">LUXE</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                <strong>Coordinated Luxury</strong> for the Modern Professional
+                <span class="hero-tagline">Distinctive Craft</span>
+            </p>
+
+            <p class="hero-description">
+                Matched sets built around a signature wristwatch, paired with cufflinks,
+                an optional ring, and refined eyewear. Every piece speaks the same language of excellence,
+                for personal use or gifting.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#packages" class="btn-hero-primary">View Packages</a>
+                <a href="#collection" class="btn-hero-secondary">
+                    <span>Explore the Collection</span>
+                    <svg class="btn-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                    </svg>
+                </a>
             </div>
 
-            <div class="hero-visual">
-                <img src="../public/rialuxe.png" alt="RIA LUXE, Distinctive Craft" class="hero-brand-image brand-image" width="1274" height="1280" decoding="async" fetchpriority="high">
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">4</div>
+                    <div class="stat-label">Matched Pieces</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Package Tiers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number stat-number-plain">Gift</div>
+                    <div class="stat-label">& Personal Use</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">∞</div>
+                    <div class="stat-label">Global Reach</div>
+                </div>
             </div>
         </div>
     </section>
@@ -268,7 +294,7 @@
     <footer class="luxe-footer">
         <div class="container footer-inner">
             <div class="footer-brand">
-                <img src="../public/rialuxe.png" alt="RIA LUXE" class="footer-brand-image brand-image" width="260" height="88" decoding="async">
+                <span class="footer-mark">RIA LUXE</span>
                 <p>Coordinated luxury for the modern professional. A global brand of RIA Empire.</p>
             </div>
             <div class="footer-links">
