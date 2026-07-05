@@ -80,8 +80,42 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     const orderForm = document.querySelector('.order-form');
+    const packageSelect = document.getElementById('package');
+    const ringCheckbox = document.getElementById('ring-addon');
+    const ringHidden = document.getElementById('include-ring-hidden');
+    const ringHint = document.getElementById('ring-addon-hint');
+
+    function syncRingAddon() {
+        if (!packageSelect || !ringCheckbox || !ringHidden) return;
+
+        const isPremium = packageSelect.value === 'premium';
+
+        if (isPremium) {
+            ringCheckbox.checked = true;
+            ringCheckbox.disabled = true;
+            ringHidden.value = 'Yes (included in Premium)';
+            if (ringHint) {
+                ringHint.textContent = 'Coordinated ring is included in the Premium package.';
+            }
+        } else {
+            ringCheckbox.disabled = false;
+            ringHidden.value = ringCheckbox.checked ? 'Yes (Standard add-on)' : 'No';
+            if (ringHint) {
+                ringHint.textContent = 'Optional add-on for Standard packages.';
+            }
+        }
+    }
+
+    if (packageSelect && ringCheckbox) {
+        packageSelect.addEventListener('change', syncRingAddon);
+        ringCheckbox.addEventListener('change', syncRingAddon);
+        syncRingAddon();
+    }
+
     if (orderForm) {
         orderForm.addEventListener('submit', function() {
+            syncRingAddon();
+
             const submitBtn = this.querySelector('.btn-submit');
             if (submitBtn) {
                 submitBtn.textContent = 'Sending...';
