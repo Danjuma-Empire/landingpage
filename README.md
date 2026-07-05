@@ -1,6 +1,6 @@
-# Danjuma Empire Landing Page
+# RIA Empire Landing Page
 
-A beautiful, responsive landing page for Danjuma Empire - a diversified holding company operating across multiple industries in Africa.
+A beautiful, responsive landing page for RIA Empire - a diversified holding company operating across multiple industries in Africa.
 
 ## 🚀 Features
 
@@ -91,13 +91,13 @@ The landing page is fully responsive and works on:
 
 ## 🏢 Business Units
 
-1. **Danjuma Farm** - Sustainable Agriculture
-2. **Danjuma Motors** - Premium Automotive
-3. **Danjuma Gadget** - Tech Innovation
-4. **Danjuma Fragrances** - Luxury Scents
-5. **Danjuma SteelLabs** - Engineering Excellence
-6. **Danjuma Structural Solutions** - Building Tomorrow
+1. **RIA** - Sustainable Agriculture
+2. **RIA** - Premium Automotive
+3. **RIA** - Tech Innovation
+4. **RIA LUXE** - Luxury Scents
+5. **RIA** - Engineering Excellence
+6. **RIA** - Building Tomorrow
 
 ---
 
-**Danjuma Empire** - Empowering Progress Across Industries
+**RIA Empire** - Empowering Progress Across Industries

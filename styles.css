@@ -19,7 +19,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 clamp(16px, 4vw, 32px);
 }
 
 /* Navigation */
@@ -41,17 +41,24 @@ body {
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 clamp(16px, 4vw, 32px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 80px;
+    gap: 16px;
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
     gap: 12px;
+    flex-shrink: 0;
+    min-width: 0;
+}
+
+.logo-text {
+    min-width: 0;
 }
 
 .logo-img {
@@ -62,9 +69,10 @@ body {
 }
 
 .logo-title {
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px);
     font-weight: 700;
     color: #1f2937;
+    white-space: nowrap;
 }
 
 .logo-subtitle {
@@ -77,7 +85,14 @@ body {
 
 .nav-menu {
     display: flex;
-    gap: 32px;
+    gap: clamp(16px, 3vw, 32px);
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-shrink: 0;
 }
 
 .nav-link {
@@ -87,6 +102,7 @@ body {
     font-size: 14px;
     transition: all 0.3s ease;
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-link:hover,
@@ -103,12 +119,6 @@ body {
     height: 2px;
     background: linear-gradient(90deg, #2563eb, #f59e0b);
     border-radius: 1px;
-}
-
-.nav-buttons {
-    display: flex;
-    gap: 16px;
-    align-items: center;
 }
 
 .btn-secondary {
@@ -165,29 +175,31 @@ body {
     transition: all 0.3s ease;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .nav-toggle {
         display: flex;
     }
-    
+
     .nav-menu {
         position: fixed;
         top: 80px;
         left: -100%;
         width: 100%;
         height: calc(100vh - 80px);
+        height: calc(100dvh - 80px);
         background: white;
         flex-direction: column;
         justify-content: flex-start;
         align-items: center;
         padding-top: 40px;
         transition: left 0.3s ease;
+        z-index: 999;
     }
-    
+
     .nav-menu.active {
         left: 0;
     }
-    
+
     .nav-buttons {
         display: none;
     }
@@ -196,11 +208,13 @@ body {
 /* Hero Section */
 .hero {
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    padding: 100px clamp(16px, 4vw, 32px) 60px;
 }
 
 .hero-bg {
@@ -234,17 +248,15 @@ body {
 
 .hero-content {
     text-align: center;
-    max-width: 800px;
-    padding: 0 20px;
+    width: 100%;
+    max-width: min(900px, 100%);
+    padding: 0;
     position: relative;
     z-index: 10;
 }
 
 .hero-logo {
-    position: relative;
-    display: inline-block;
-    margin-bottom: 48px;
-    animation: fadeInUp 1s ease-out;
+    display: none;
 }
 
 .hero-logo-img {
@@ -306,10 +318,10 @@ body {
 }
 
 .hero-description {
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
     color: #6b7280;
-    margin-bottom: 64px;
-    max-width: 600px;
+    margin-bottom: clamp(40px, 6vw, 64px);
+    max-width: 640px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.7;
@@ -318,11 +330,11 @@ body {
 
 .hero-buttons {
     display: flex;
-    gap: 24px;
+    gap: clamp(12px, 3vw, 24px);
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 80px;
+    margin-bottom: clamp(48px, 8vw, 80px);
     animation: fadeInUp 1s ease-out 0.8s both;
 }
 
@@ -398,31 +410,42 @@ body {
 
 .hero-stats {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 32px;
-    max-width: 500px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(16px, 3vw, 32px);
+    width: 100%;
+    max-width: 720px;
     margin: 0 auto;
     animation: fadeInUp 1s ease-out 1s both;
 }
 
 .stat-item {
     text-align: center;
+    min-width: 0;
 }
 
 .stat-number {
-    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
     font-weight: 900;
+    color: #2563eb;
     background: linear-gradient(45deg, #2563eb, #f59e0b);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
     margin-bottom: 4px;
+    line-height: 1.2;
+}
+
+.stat-number-plain {
+    background: none;
+    -webkit-text-fill-color: #2563eb;
+    color: #2563eb;
 }
 
 .stat-label {
-    font-size: 0.875rem;
+    font-size: clamp(0.75rem, 2vw, 0.875rem);
     color: #6b7280;
     font-weight: 500;
+    line-height: 1.3;
 }
 
 /* Section Styles */
@@ -608,7 +631,7 @@ body {
 
 .businesses-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
     gap: 32px;
 }
 
@@ -1130,6 +1153,9 @@ body {
 
 .footer-bottom p {
     color: #9ca3af;
+    font-size: clamp(0.8rem, 2.5vw, 0.875rem);
+    line-height: 1.6;
+    padding: 0 clamp(8px, 2vw, 16px);
 }
 
 @media (max-width: 768px) {
@@ -1221,7 +1247,58 @@ body {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .businesses-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    }
+
+    .about-content {
+        gap: 48px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .about,
+    .businesses,
+    .contact,
+    .cta {
+        padding: 80px 0;
+    }
+
+    .hero-stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 400px;
+    }
+
+    .hero-title {
+        margin-bottom: 24px;
+    }
+
+    .btn-primary {
+        padding: 10px 16px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-subtitle {
+        display: none;
+    }
+
+    .hero-stats {
+        gap: 20px 16px;
+    }
+
+    .stat-label {
+        font-size: 0.7rem;
     }
 }
 

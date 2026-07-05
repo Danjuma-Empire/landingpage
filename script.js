@@ -408,9 +408,9 @@ document.addEventListener('DOMContentLoaded', function() {
     loadingScreen.innerHTML = `
         <div class="loading-content">
             <div class="loading-logo">
-                <img src="/logo.png" alt="Danjuma Empire">
+                <img src="/logo.png" alt="RIA Empire">
             </div>
-            <div class="loading-text">Danjuma Empire</div>
+            <div class="loading-text">RIA Empire</div>
             <div class="loading-spinner"></div>
         </div>
     `;
