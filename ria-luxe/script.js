@@ -112,15 +112,80 @@ document.addEventListener('DOMContentLoaded', function() {
         syncRingAddon();
     }
 
+    function resetOrderForm() {
+        if (!orderForm) return;
+
+        orderForm.reset();
+
+        const submitBtn = orderForm.querySelector('.btn-submit');
+        if (submitBtn) {
+            submitBtn.textContent = 'Submit Inquiry';
+            submitBtn.disabled = false;
+        }
+
+        syncRingAddon();
+    }
+
+    function showFormStatus(message, type) {
+        const formStatus = document.getElementById('form-status');
+        if (!formStatus) return;
+
+        formStatus.textContent = message;
+        formStatus.hidden = false;
+        formStatus.classList.remove('form-status--success', 'form-status--error');
+        formStatus.classList.add(type === 'error' ? 'form-status--error' : 'form-status--success');
+    }
+
+    function clearFormStatus() {
+        const formStatus = document.getElementById('form-status');
+        if (!formStatus) return;
+
+        formStatus.hidden = true;
+        formStatus.textContent = '';
+        formStatus.classList.remove('form-status--success', 'form-status--error');
+    }
+
     if (orderForm) {
-        orderForm.addEventListener('submit', function() {
+        orderForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
             syncRingAddon();
+            clearFormStatus();
 
             const submitBtn = this.querySelector('.btn-submit');
+            const defaultLabel = 'Submit Inquiry';
+
             if (submitBtn) {
                 submitBtn.textContent = 'Sending...';
                 submitBtn.disabled = true;
             }
+
+            try {
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: new FormData(this),
+                    headers: { Accept: 'application/json' }
+                });
+
+                if (!response.ok) {
+                    throw new Error('Submission failed');
+                }
+
+                resetOrderForm();
+                showFormStatus('Thank you. Your inquiry was sent successfully. We will contact you soon.', 'success');
+            } catch (error) {
+                if (submitBtn) {
+                    submitBtn.textContent = defaultLabel;
+                    submitBtn.disabled = false;
+                }
+                showFormStatus('Something went wrong. Please try again or email us at rialuxe01@gmail.com.', 'error');
+            }
         });
     }
+
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted) {
+            resetOrderForm();
+            clearFormStatus();
+        }
+    });
 });
