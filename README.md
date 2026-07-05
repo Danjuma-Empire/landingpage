@@ -14,12 +14,16 @@ A beautiful, responsive landing page for RIA Empire - a diversified holding comp
 
 ```sh
 landingpage/
-├── index.html          # Main HTML file
-├── styles.css          # All CSS styles and animations
-├── script.js           # JavaScript functionality
+├── index.html          # Main RIA Empire landing page
+├── styles.css
+├── script.js
+├── ria-luxe/           # RIA LUXE brand landing page
+│   ├── index.html
+│   ├── styles.css
+│   └── script.js
 ├── public/
-│   └── logo.png        # Company logo
-└── README.md           # This file
+│   └── logo.png
+└── README.md
 ```
 
 ## 🎨 Design Features

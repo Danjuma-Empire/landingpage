@@ -655,6 +655,12 @@ body {
     background: linear-gradient(45deg, #2563eb, #f59e0b);
     opacity: 0;
     transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.business-card > * {
+    position: relative;
+    z-index: 1;
 }
 
 .business-card:hover::before {
@@ -761,6 +767,9 @@ body {
     align-items: center;
     justify-content: center;
     gap: 8px;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 .business-btn:hover {
@@ -769,6 +778,33 @@ body {
     border-color: transparent;
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+}
+
+.business-btn--link {
+    background: linear-gradient(45deg, #ec4899, #db2777);
+    color: white;
+    border-color: transparent;
+}
+
+.business-btn--link:hover {
+    background: linear-gradient(45deg, #db2777, #be185d);
+    box-shadow: 0 8px 20px rgba(236, 72, 153, 0.35);
+}
+
+.business-btn--soon {
+    background: #f3f4f6;
+    color: #9ca3af;
+    border-color: #e5e7eb;
+    cursor: not-allowed;
+    opacity: 0.85;
+}
+
+.business-btn--soon:hover {
+    background: #f3f4f6;
+    color: #9ca3af;
+    border-color: #e5e7eb;
+    transform: none;
+    box-shadow: none;
 }
 
 /* CTA Section */
