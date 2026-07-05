@@ -689,7 +689,7 @@ body {
     box-shadow: 0 8px 20px rgba(139, 92, 246, 0.3);
 }
 
-.business-card[data-business="fragrances"] .business-icon {
+.business-card[data-business="luxe"] .business-icon {
     background: linear-gradient(45deg, #ec4899, #db2777);
     box-shadow: 0 8px 20px rgba(236, 72, 153, 0.3);
 }
@@ -699,7 +699,7 @@ body {
     box-shadow: 0 8px 20px rgba(107, 114, 128, 0.3);
 }
 
-.business-card[data-business="structural"] .business-icon {
+.business-card[data-business="realestate"] .business-icon {
     background: linear-gradient(45deg, #f97316, #ea580c);
     box-shadow: 0 8px 20px rgba(249, 115, 22, 0.3);
 }

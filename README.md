@@ -94,9 +94,9 @@ The landing page is fully responsive and works on:
 1. **RIA Farm** - Sustainable Agriculture
 2. **RIA Motors** - Premium Automotive
 3. **RIA Gadget** - Tech Innovation
-4. **RIA LUXE** - Luxury Scents
+4. **RIA LUXE** - Luxury Wristwatches
 5. **RIA SteelLabs** - Engineering Excellence
-6. **RIA Structural Solutions** - Building Tomorrow
+6. **RIA Real Estate** - Premium Properties
 
 ---
 
