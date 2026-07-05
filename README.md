@@ -17,15 +17,13 @@ landingpage/
 ├── index.html          # Main RIA Empire landing page
 ├── styles.css
 ├── script.js
-├── ria-luxe/           # RIA LUXE brand landing page
-│   ├── index.html
-│   ├── styles.css
-│   └── script.js
 ├── public/
 │   ├── logo.png        # RIA Empire logo
-│   └── rialuxe.png     # RIA LUXE brand logo
+│   └── rialuxe.png     # RIA LUXE brand image (business card)
 └── README.md
 ```
+
+RIA LUXE is deployed separately at [rialuxe.netlify.app](https://rialuxe.netlify.app).
 
 ## 🎨 Design Features
 
@@ -49,9 +47,10 @@ landingpage/
 2. **Open `index.html`** in your web browser
 3. **That's it!** No build process or dependencies required
 
-## 🌐 Live Preview
+## Live sites
 
-Simply open `index.html` in any modern web browser to view the landing page.
+- **RIA Empire:** [riaempire.netlify.app](https://riaempire.netlify.app)
+- **RIA LUXE:** [rialuxe.netlify.app](https://rialuxe.netlify.app)
 
 ## 📱 Responsive Design
 
