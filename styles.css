@@ -920,6 +920,15 @@ body {
     margin-bottom: 4px;
 }
 
+.contact-value a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-value a:hover {
+    color: #2563eb;
+}
+
 .contact-desc {
     font-size: 0.875rem;
     color: #6b7280;

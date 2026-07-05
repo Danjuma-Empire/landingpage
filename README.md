@@ -85,18 +85,18 @@ The landing page is fully responsive and works on:
 
 ## 📞 Contact Information
 
-- **Email**: danjumaempireworld@gmail.com
+- **Email**: rialuxe01@gmail.com
 - **Phone**: +234 901 807 1372
 - **Location**: Nigeria, Africa
 
 ## 🏢 Business Units
 
-1. **RIA** - Sustainable Agriculture
-2. **RIA** - Premium Automotive
-3. **RIA** - Tech Innovation
+1. **RIA Farm** - Sustainable Agriculture
+2. **RIA Motors** - Premium Automotive
+3. **RIA Gadget** - Tech Innovation
 4. **RIA LUXE** - Luxury Scents
-5. **RIA** - Engineering Excellence
-6. **RIA** - Building Tomorrow
+5. **RIA SteelLabs** - Engineering Excellence
+6. **RIA Structural Solutions** - Building Tomorrow
 
 ---
 
