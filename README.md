@@ -47,10 +47,9 @@ RIA LUXE is deployed separately at [rialuxe.netlify.app](https://rialuxe.netlify
 2. **Open `index.html`** in your web browser
 3. **That's it!** No build process or dependencies required
 
-## Live sites
+## Deploy
 
-- **RIA Empire:** [riaempire.netlify.app](https://riaempire.netlify.app)
-- **RIA LUXE:** [rialuxe.netlify.app](https://rialuxe.netlify.app)
+This site is deployed on **Netlify** at [riaempire.netlify.app](https://riaempire.netlify.app). RIA LUXE is deployed separately at [rialuxe.netlify.app](https://rialuxe.netlify.app).
 
 ## 📱 Responsive Design
 
