@@ -709,9 +709,11 @@ body {
 .business-brand-img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center top;
-    border-radius: 12px;
+    object-fit: contain;
+    object-position: center center;
+    border-radius: 10px;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: high-quality;
 }
 
 .business-card[data-business="steel"] .business-icon {

@@ -22,7 +22,8 @@ landingpage/
 │   ├── styles.css
 │   └── script.js
 ├── public/
-│   └── logo.png
+│   ├── logo.png        # RIA Empire logo
+│   └── rialuxe.png     # RIA LUXE brand logo
 └── README.md
 ```
 
